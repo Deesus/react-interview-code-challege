@@ -9,37 +9,35 @@ class Panel extends Component {
     constructor(props) {
         super(props);
 
+        // the Panel's default state:
         this.state = {
             headingText: 'Login to your Account',
             userName: ''
-        }
+        };
     }
 
+    // TODO: this `onChange` handler doesn't seem to change the `userName` property
     handleTextFieldOnChange = (event) => {
-        this.setState({
-            userName: event.target.value
-        });
+        this.userName = event.target.value;
     };
 
+    // TODO: this `onClick` handler doesn't seem to change the `headingText` property or reset the `userName`
     handleButtonOnClick = (event) => {
         if (this.state.userName.trim() !== '') {
-            this.setState({
-                headingText: `Welcome, ${this.state.userName}!`,
-                userName: ''
-            });
+            this.headingText = `Welcome, ${this.state.userName}!`;
+            this.userName = '';
         }
     };
 
-    render() {
-        return (
-            <div className={Css.Panel}>
-                <PanelHeader headingText={this.state.headingText} userName={this.state.userName} />
+    // TODO: why can't the component return our markup?
+    return (
+        <div className={Css.Panel}>
+            <PanelHeader headingText={ this.state.headingText } userName={ this.state.userName } />
 
-                <TextField inputFieldOnChange={ this.handleTextFieldOnChange } value={ this.state.userName } />
-                <AppButton buttonOnClick={this.handleButtonOnClick}>Log In</AppButton>
-            </div>
-        );
-    }
+            <TextField inputFieldOnChange={ this.handleTextFieldOnChange } value={ this.state.userName } />
+            <AppButton buttonOnClick={ this.handleButtonOnClick }>Log In</AppButton>
+        </div>
+    );
 }
 
 export default Panel;

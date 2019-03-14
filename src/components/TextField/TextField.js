@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import Css from './TextField.css';
 
-const AppInput = (props) => {
+const AppInput = () => {
+
+    // TODO: the `inputFieldOnChange` event doesn't seem to work -- why?
     return (
         <label>
-            <input className={Css.TextField} onChange={props.inputFieldOnChange} placeholder="Username" />
+            <input className={Css.TextField} onChange={inputFieldOnChange} placeholder="Username" />
         </label>
     );
 };
