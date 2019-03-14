@@ -4,10 +4,11 @@ Someone messed with our code, and now our login screen is completely broken.
 It's your task to resolve all outstanding issues so that the app functions as it used to.
 
 
-## Requirements:
+### Requirements:
 - Functionality and appearance of app should match solution version.
 - Do NOT add or delete any files in the repo.
 - The app has alredy been styled for you; do NOT modify any CSS/Less files or add custom styles.
+- Please do not commit your changes to Git.
 
 
 ### Hints:
@@ -18,5 +19,8 @@ It's your task to resolve all outstanding issues so that the app functions as it
 
 
 ### Quick Start:
-- run in development (`http://localhost:3000` in your browser):
+- you should do your challange by running the app development (`http://localhost:3000` in your browser):
 `$ npm run start`
+
+- if you want, checkout the working solution of the app (`http://localhost:5000` in your browser):
+`$ yarn serve -s build`
