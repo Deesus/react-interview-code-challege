@@ -19,7 +19,7 @@ It's your task to resolve all outstanding issues so that the app functions as it
 
 
 ### Quick Start:
-- you should do your challange by running the app development (`http://localhost:3000` in your browser):
+- you should do your challenge by running the app development (`http://localhost:3000` in your browser):
 `$ npm run start`
 
 - if you want, checkout the working solution of the app (`http://localhost:5000` in your browser):
